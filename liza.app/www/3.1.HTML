@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta name="viewport" content="initial-scale=1, maximum-scale=1" />
+<title>MYMEMO</title>
+</head>  
+ <body style= "background-image:url(img../img...jpg);background-repeat:no-repeat;background-size:100% 525%">
+<br><br><br>
+<div class="bg">
+<center><br><br><br><font size="10" face="jokerman" color="#f0f0f0f"><div id="MEMO" class="blink">Take Down Notes</div></font>
+<center> <textarea rows="20" cols="30" class="textarea" id="MYMEMO" placeholder="write your notes..."></textarea></center> 
+  <button class="button"  onclick="saveData()">Save</button>
+   <button class="button"  onclick="editData()">Edit</button>
+    <button class="button"  onclick="removeData()">Remove</button>
+    <a href="3.2.html"><button type="button">NEW</button></a>
+    <a href="3.0.html"><button type="button">BACK</button></a>
+
+</div>
+<script>
+
+function saveData(){
+    var input = document.getElementById("MYMEMO").value
+localStorage.setItem("MYMEMO3", input);}
+function editData(){
+    document.getElementById('MYMEMO').value=window.localStorage.getItem("MYMEMO3");}
+function removeData(){
+    document.getElementById("MYMEMO3").value=null;}
+</script>
+</body>
+</html>
